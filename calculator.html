@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Never Zero | Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>NEVER ZERO</h1>
+
+    <h2>Win Probability Calculator</h2>
+
+    <p>
+        Enter a live basketball game situation to estimate win probability
+        based on score, time, game format, and possession.
+    </p>
+
+
+    <div class="calculator">
+
+
+        <label>Game Format</label>
+
+        <select id="format" onchange="changeFormat()">
+            <option value="quarters">Quarters</option>
+            <option value="halves">Halves</option>
+        </select>
+
+
+
+        <label>Quarter/Half</label>
+
+        <select id="period"></select>
+
+
+
+        <label>Length of Each Quarter/Half</label>
+
+        <input
+            type="text"
+            id="periodLength"
+            value="8:00">
+
+
+
+        <label>Time Remaining in Quarter/Half</label>
+
+        <input
+            type="text"
+            id="timeRemaining"
+            placeholder="Example: 3:30">
+
+
+
+        <label>Team A Score</label>
+
+        <input
+            type="number"
+            id="teamA"
+            min="0">
+
+
+
+        <label>Team B Score</label>
+
+        <input
+            type="number"
+            id="teamB"
+            min="0">
+
+
+
+        <label>Who Has The Ball?</label>
+
+        <select id="possession">
+
+            <option value="teamA">
+                Team A
+            </option>
+
+            <option value="teamB">
+                Team B
+            </option>
+
+        </select>
+
+
+
+        <button onclick="calculateProbability()">
+            Calculate Probability
+        </button>
+
+
+        <button onclick="resetCalculator()">
+            Reset
+        </button>
+
+
+    </div>
+
+
+    <div id="result"></div>
+
+
+    <br><br>
+
+
+    <a href="index.html">
+
+        <button>
+            Back to Home
+        </button>
+
+    </a>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
